@@ -1,0 +1,472 @@
+\documentclass[a4paper,9pt]{extarticle}
+
+%=========================================================
+% PACKAGES
+%=========================================================
+
+\usepackage[
+a4paper,
+top=1.8cm,
+bottom=1cm,
+left=1cm,
+right=1cm,
+headheight=14pt,
+headsep=5mm
+]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+
+\usepackage[sfdefault]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{multicol}
+\setlength{\columnsep}{0.7cm}
+
+\usepackage{amsmath,amssymb}
+
+\usepackage{titlesec}
+\usepackage{enumitem}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+
+\usepackage{xcolor}
+
+\usepackage{graphicx}
+\usepackage{float}
+
+\usepackage{tikz}
+
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+
+
+%=========================================================
+% PAGE SETTINGS
+%=========================================================
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.5pt}
+
+\setlength{\abovedisplayskip}{4pt}
+\setlength{\belowdisplayskip}{4pt}
+
+\setlist[itemize]{
+leftmargin=*,
+itemsep=1pt,
+topsep=1pt
+}
+
+
+%=========================================================
+% COLORS
+%=========================================================
+
+\definecolor{Blue}{HTML}{E3F0FF}
+\definecolor{Green}{HTML}{E3F7EA}
+\definecolor{Pink}{HTML}{FFE5ED}
+\definecolor{Orange}{HTML}{FFF0DC}
+\definecolor{Purple}{HTML}{EEE7FF}
+\definecolor{Yellow}{HTML}{FFFADB}
+
+
+\definecolor{BlueTitle}{HTML}{285B8F}
+\definecolor{GreenTitle}{HTML}{287052}
+\definecolor{PinkTitle}{HTML}{A84063}
+\definecolor{OrangeTitle}{HTML}{A96500}
+\definecolor{PurpleTitle}{HTML}{6245A5}
+
+
+%=========================================================
+% HEADER
+%=========================================================
+
+\pagestyle{fancy}
+
+\fancyhf{}
+
+\fancyhead[L]{\small\textbf{Course name}}
+\fancyhead[C]{\small Chapter or topic name}
+\fancyhead[R]{\small Week XX --- XX/XX/20XX}
+
+\renewcommand{\headrulewidth}{0.4pt}
+
+
+
+%=========================================================
+% TITLES
+%=========================================================
+
+\titleformat{\section}
+{\large\bfseries\color{BlueTitle}}
+{}{0pt}{}
+
+\titlespacing{\section}
+{0pt}{6pt}{3pt}
+
+
+% separator
+
+\newcommand{\separator}{
+\vspace{2pt}
+\hrule
+\vspace{3pt}
+}
+
+
+%=========================================================
+% BOXES
+%=========================================================
+
+% DEFINITION - blue
+\newtcolorbox{definition}{
+enhanced,
+breakable,
+colback=Blue,
+colframe=BlueTitle,
+boxrule=0.7pt,
+arc=0mm,
+title=\textbf{Definition},
+fonttitle=\bfseries
+}
+
+% IMPORTANT - pink
+\newtcolorbox{important}{
+enhanced,
+breakable,
+colback=Pink,
+colframe=PinkTitle,
+boxrule=0.7pt,
+arc=0mm,
+title=\textbf{Key idea},
+fonttitle=\bfseries
+}
+
+% FORMULAS - green
+\newtcolorbox{formula}{
+enhanced,
+breakable,
+colback=Green,
+colframe=GreenTitle,
+boxrule=0.7pt,
+arc=0mm,
+title=\textbf{Key formulas},
+fonttitle=\bfseries
+}
+
+% WARNING - orange
+\newtcolorbox{warning}{
+enhanced,
+breakable,
+colback=Orange,
+colframe=OrangeTitle,
+boxrule=0.7pt,
+arc=0mm,
+title=\textbf{Warning},
+fonttitle=\bfseries
+}
+
+% EXAMPLE - purple
+\newtcolorbox{example}{
+enhanced,
+breakable,
+colback=Purple,
+colframe=PurpleTitle,
+boxrule=0.7pt,
+arc=0mm,
+title=\textbf{Example},
+fonttitle=\bfseries
+}
+
+% SUMMARY - orange
+\newtcolorbox{summary}{
+enhanced,
+breakable,
+colback=Yellow,
+colframe=OrangeTitle,
+boxrule=0.7pt,
+arc=0mm,
+title=\textbf{Summary},
+fonttitle=\bfseries
+}
+
+
+
+%=========================================================
+% FIGURE BOX
+%=========================================================
+
+\newtcolorbox{figurebox}{
+enhanced,
+colback=white,
+colframe=gray,
+boxrule=0.5pt,
+arc=0mm,
+center
+}
+
+
+
+%=========================================================
+% DOCUMENT
+%=========================================================
+
+\begin{document}
+
+%\footnotesize   --> To reduce the size of the text
+
+\thispagestyle{fancy}
+
+
+
+\begin{multicols}{2}
+
+
+%=========================================================
+\section{Course 1: Divide and Conquer}
+
+
+\begin{definition}
+
+A technique that solves a problem by:
+
+\begin{itemize}
+
+\item dividing the problem into smaller sub-problems;
+
+\item recursively solving each part;
+
+\item combining the obtained solutions.
+
+\end{itemize}
+
+\end{definition}
+
+
+\separator % The separation  bar
+
+
+\textbf{General principle}
+
+A recursive algorithm usually contains:
+
+\begin{itemize}
+
+\item a base case;
+
+\item a reduction step;
+
+\item a combination step.
+
+\end{itemize}
+
+
+
+\begin{formula}
+
+Recurrence relation:
+
+\[
+T(n)=aT(\frac{n}{b})+f(n)
+\]
+
+where:
+
+\begin{itemize}
+
+\item $a$: number of sub-problems;
+
+\item $b$: reduction factor;
+
+\item $f(n)$: combination cost.
+
+\end{itemize}
+
+\end{formula}
+
+
+
+\begin{example}
+
+Merge Sort:
+
+\[
+T(n)=2T(n/2)+O(n)
+\]
+
+
+The array is divided into two halves.
+
+The merge operation combines sorted sub-arrays.
+
+
+Final complexity:
+
+\[
+O(n\log n)
+\]
+
+
+\end{example}
+
+
+% IMAGE
+
+\begin{center}
+
+\includegraphics[
+width=0.55\linewidth
+]{images/goat_1.png}
+
+\end{center}
+
+
+
+%=========================================================
+\section{Course 2: Complexity Analysis}
+
+
+\begin{important}
+
+Algorithm complexity describes how the execution time grows
+according to the input size.
+
+\end{important}
+
+
+
+\textbf{Common complexity classes}
+
+\begin{itemize}
+
+\item $O(1)$ : constant
+
+\item $O(\log n)$ : logarithmic
+
+\item $O(n)$ : linear
+
+\item $O(n\log n)$ : quasi-linear
+
+\item $O(n^2)$ : quadratic
+
+\end{itemize}
+
+
+
+\begin{figurebox}
+
+\begin{tikzpicture}
+
+\draw[->] (0,0)--(4,0);
+\draw[->] (0,0)--(0,3);
+
+\draw[blue, thick]
+plot coordinates {
+(0,0)
+(1,0.5)
+(2,1.2)
+(3,2)
+(4,2.7)
+};
+
+\end{tikzpicture}
+
+\end{figurebox}
+
+
+
+\separator
+
+
+
+%=========================================================
+\section{Course 3: Classical Algorithms}
+
+
+\begin{example}
+
+Binary Search:
+
+
+Sorted input:
+
+\[
+[1,3,5,8,10,15]
+\]
+
+
+The search space is divided by two
+at each iteration.
+
+
+Complexity:
+
+\[
+O(\log n)
+\]
+
+
+\end{example}
+
+
+
+\begin{warning}
+
+Binary search requires
+a sorted input array.
+
+\end{warning}
+
+
+
+%=========================================================
+\section{Important Exercises}
+
+
+\begin{summary}
+
+
+\begin{itemize}
+
+\item Compute algorithm complexity.
+
+\item Identify recurrence relations.
+
+\item Compare different approaches.
+
+\item Prove asymptotic bounds.
+
+\end{itemize}
+
+
+\end{summary}
+
+
+
+%=========================================================
+\section{Weekly Summary}
+
+
+\begin{important}
+
+Main points:
+
+\begin{itemize}
+
+\item Divide and conquer reduces complex problems.
+
+\item Recurrences describe recursive algorithms.
+
+\item Asymptotic analysis ignores constant factors.
+
+\end{itemize}
+
+\end{important}
+
+
+
+\end{multicols}
+
+
+\end{document}

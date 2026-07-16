@@ -1,0 +1,272 @@
+\documentclass[a4paper,9pt]{extarticle}
+
+%------------------------------------------------
+% Packages
+%------------------------------------------------
+\usepackage[
+a4paper,
+margin=1.2cm,
+headheight=14pt,
+headsep=5mm
+]{geometry}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+
+\usepackage{multicol}
+\usepackage{titlesec}
+\usepackage{tcolorbox}
+\usepackage{enumitem}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{graphicx}
+
+%------------------------------------------------
+% Header
+%------------------------------------------------
+
+\pagestyle{fancy}
+
+\fancyhf{}
+
+\fancyhead[L]{\textbf{Course name}}
+\fancyhead[C]{\textbf{Weekly Notes - Chapter or topic name}}
+\fancyhead[R]{Week X --- XX/XX/20XX}
+
+\renewcommand{\headrulewidth}{0.4pt}
+
+
+%------------------------------------------------
+% Spacing
+%------------------------------------------------
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+
+\setstretch{0.95}
+
+
+%------------------------------------------------
+% Section style
+%------------------------------------------------
+
+\titleformat{\section}
+{\large\bfseries}
+{}{0em}{}
+
+\titlespacing{\section}
+{0pt}{6pt}{4pt}
+
+
+%------------------------------------------------
+% Lists
+%------------------------------------------------
+
+\setlist[itemize]{
+leftmargin=*,
+itemsep=1pt,
+topsep=2pt
+}
+
+
+%------------------------------------------------
+% Boxes
+%------------------------------------------------
+
+\newtcolorbox{important}{
+colback=gray!8,
+colframe=black,
+boxrule=0.5pt,
+arc=2mm,
+left=3pt,
+right=3pt,
+top=3pt,
+bottom=3pt
+}
+
+
+\newtcolorbox{formula}{
+colback=white,
+colframe=black,
+boxrule=0.4pt,
+arc=1mm,
+left=2pt,
+right=2pt,
+top=2pt,
+bottom=2pt
+}
+
+
+%------------------------------------------------
+
+\begin{document}
+
+\thispagestyle{fancy}
+
+
+\begin{center}
+    {\LARGE\textbf{Course Name}}\\
+    \vspace{3mm}
+    \large Week X
+\end{center}
+
+\vspace{3mm}
+
+
+\begin{multicols}{2}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Lecture 1}
+
+\begin{important}
+Important definition or main idea.
+\end{important}
+
+
+\textbf{Concepts}
+
+\begin{itemize}
+\item ...
+\item ...
+\item ...
+\end{itemize}
+
+
+\begin{formula}
+
+\[
+f(x)=x^2+3x+1
+\]
+
+\end{formula}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Lecture 2}
+
+\textbf{Key points}
+
+\begin{itemize}
+
+\item ...
+\item ...
+\item ...
+
+\end{itemize}
+
+
+\begin{formula}
+
+\[
+a^2+b^2=c^2
+\]
+
+\end{formula}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Lecture 3}
+
+
+\begin{important}
+
+Important remark.
+
+\end{important}
+
+
+\begin{itemize}
+
+\item ...
+\item ...
+
+\end{itemize}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Visual Example}
+
+
+\begin{center}
+
+\includegraphics[
+height=5cm
+]{images/goat_2.png}
+
+\vspace{1mm}
+
+\small Figure: Course illustration.
+
+\end{center}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Difficult Exercises}
+
+
+\begin{itemize}
+
+\item Exercise 1
+
+\item Exercise 2
+
+\item Exercise 3
+
+\end{itemize}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Common Mistakes}
+
+
+\begin{itemize}
+
+\item ...
+
+\item ...
+
+\item ...
+
+\end{itemize}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Review}
+
+
+\begin{itemize}
+
+\item ...
+
+\item ...
+
+\item ...
+
+\end{itemize}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{multicols}
+
+
+\end{document}

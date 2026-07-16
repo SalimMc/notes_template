@@ -1,0 +1,14 @@
+.idea/
+.vscode/
+.env/
+.env
+
+# LaTeX build files
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex.gz(busy)
+*.out
+*.toc
