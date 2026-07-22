@@ -1,0 +1,352 @@
+\documentclass[10pt,a4paper]{article}
+
+% -------------------------------------------------
+% Packages
+% -------------------------------------------------
+
+\usepackage[margin=1.1cm,top=0.6cm]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{amsmath,amssymb}
+
+\pagestyle{empty}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+
+% -------------------------------------------------
+% Colors
+% -------------------------------------------------
+
+\definecolor{Main}{HTML}{111827}
+\definecolor{Line}{HTML}{D1D5DB}
+\definecolor{Box}{HTML}{F3F4F6}
+
+
+% -------------------------------------------------
+% Bullet style
+% -------------------------------------------------
+
+\renewcommand{\labelitemi}{
+\tikz[baseline=-0.6ex]\fill[Main] (0,0) circle (1.2pt);
+}
+
+\setlist[itemize]{
+    leftmargin=13pt,
+    itemsep=1.5pt,
+    topsep=1.5pt
+}
+
+
+% -------------------------------------------------
+
+\begin{document}
+
+
+% =================================================
+% HEADER
+% =================================================
+
+{\scriptsize
+Course name
+\hfill
+Topic note - Chapter or topic name
+\hfill
+Week X --- XX/XX/20XX
+}
+
+\vspace{1mm}
+
+\hrule height 0.3pt
+
+\vspace{3mm}
+
+
+
+% =================================================
+% MAIN STRUCTURE
+% =================================================
+
+
+\begin{tabular}{p{0.72\linewidth}|p{0.24\linewidth}}
+
+
+
+% =================================================
+% LEFT COLUMN
+% =================================================
+
+\begin{minipage}[t]{\linewidth}
+
+
+
+\textbf{Overview}
+
+
+\begin{itemize}
+
+\item \textit{Understand the structure of vector spaces.}
+
+\item \textit{Identify bases, dimensions and dependencies.}
+
+\item \textit{Use linear combinations as the main tool.}
+
+\end{itemize}
+
+
+
+\vspace{3mm}
+
+
+
+% ---------- CONCEPT BOX ----------
+
+
+\begin{tcolorbox}[
+colback=blue!5,
+colframe=blue!40,
+boxrule=0.5pt,
+arc=1mm
+]
+
+\textbf{Concept}
+
+\textit{
+A vector space allows vectors to be added and multiplied
+by scalars while respecting mathematical rules.
+}
+
+\end{tcolorbox}
+
+
+
+\vspace{2mm}
+
+
+
+% ---------- ATTENTION BOX ----------
+
+
+\begin{tcolorbox}[
+colback=red!5,
+colframe=red!60,
+boxrule=0.5pt,
+arc=1mm
+]
+
+\textbf{Attention}
+
+\textit{
+A generating set is not always a basis.
+A basis must also be linearly independent.
+}
+
+\end{tcolorbox}
+
+
+
+\vspace{5mm}
+
+
+
+% ---------- IMAGE + TEXT BOX ----------
+
+
+\begin{tcolorbox}[
+colback=Box,
+colframe=Line,
+boxrule=0.5pt,
+arc=1mm,
+left=5pt,
+right=5pt,
+top=5pt,
+bottom=5pt
+]
+
+
+\begin{minipage}[c]{0.38\linewidth}
+
+\centering
+
+\includegraphics[
+width=\linewidth,
+height=3.5cm,
+keepaspectratio
+]{images/goat_1.png}
+
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.57\linewidth}
+
+
+\textit{
+This image illustrates the intuition behind the topic.
+The visual representation helps connect abstract definitions
+with concrete ideas and provides a quick memory anchor.
+}
+
+
+\vspace{3mm}
+
+
+\textit{
+Keep this picture as a visual summary of the main concept.
+}
+
+
+\end{minipage}
+
+
+\end{tcolorbox}
+
+
+
+\vspace{5mm}
+
+
+
+% ---------- CORE CONTENT ----------
+
+
+\textbf{Core concepts}
+
+
+\begin{itemize}
+
+\item \textit{Linear independence: vectors cannot be expressed as combinations of others.}
+
+\item \textit{Basis: smallest set of vectors generating the whole space.}
+
+\item \textit{Dimension: number of vectors in a basis.}
+
+\item \textit{Span: all possible linear combinations.}
+
+\end{itemize}
+
+
+
+\vspace{3mm}
+
+
+
+\textbf{Important formula}
+
+
+\[
+A^{-1}
+=
+\frac{1}{\det(A)}
+\operatorname{adj}(A)
+\]
+
+
+
+\vspace{2mm}
+
+
+
+\textbf{Key condition}
+
+
+\textit{
+A matrix is invertible if and only if
+$\det(A)\neq0$.
+}
+
+
+
+\end{minipage}
+
+
+
+&
+
+
+
+% =================================================
+% RIGHT COLUMN
+% =================================================
+
+\begin{minipage}[t]{\linewidth}
+
+
+\textit{\textbf{Quick notes}}
+
+
+\vspace{2mm}
+
+\hrule height 0.3pt
+
+\vspace{3mm}
+
+
+
+\begin{itemize}
+
+\item \textit{Check independence before finding a basis.}
+
+\end{itemize}
+
+
+
+\vspace{2mm}
+
+\hrule height 0.3pt
+
+\vspace{3mm}
+
+
+
+\begin{itemize}
+
+\item \textit{A basis is never unique.}
+
+\end{itemize}
+
+
+
+\vspace{2mm}
+
+\hrule height 0.3pt
+
+\vspace{3mm}
+
+
+
+\begin{itemize}
+
+\item \textit{Dimension stays constant for every basis.}
+
+\end{itemize}
+
+
+
+\vspace{2mm}
+
+\hrule height 0.3pt
+
+\vspace{3mm}
+
+
+
+\begin{itemize}
+
+\item \textit{The determinant gives information about invertibility.}
+
+\end{itemize}
+
+
+
+\end{minipage}
+
+
+\end{tabular}
+
+
+\end{document}
