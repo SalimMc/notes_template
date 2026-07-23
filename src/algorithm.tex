@@ -1,0 +1,84 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[most]{tcolorbox}
+\usepackage{xcolor}
+
+\begin{document}
+
+\begin{tcolorbox}[
+    colback=gray!30,
+    colframe=black,
+    boxrule=1pt,
+    arc=0mm
+]
+
+\begin{tcolorbox}[
+    colback=gray!10,
+    colframe=black,
+    arc=0mm
+]
+\centering
+{\Huge\bfseries TITLE/name of the algorithm}
+\end{tcolorbox}
+
+\begin{tcolorbox}[
+    colback=gray!10,
+    colframe=black,
+    arc=0mm
+]
+\small
+Explanation of the algorithm: its goal and how it works, on what it relies, what's the logic behind it.
+\end{tcolorbox}
+
+\begin{tcolorbox}[
+    colback=black!5,
+    colframe=black,
+    arc=0mm,
+    title=Pseudo-code
+]
+\small
+\ttfamily
+Algorithm(...)\\
+\quad instruction 1\\
+\quad instruction 2\\
+\quad return result
+\end{tcolorbox}
+
+\begin{tcolorbox}[
+    colback=cyan!20,
+    colframe=black,
+    arc=0mm
+]
+\small
+\textbf{Time Complexity:} $O(pokemon)$
+\end{tcolorbox}
+
+\begin{tcolorbox}[
+    colback=violet!20,
+    colframe=black,
+    arc=0mm
+]
+\small
+\textbf{Space Complexity:} $O(pokemon)$
+\end{tcolorbox}
+
+\begin{tcolorbox}[
+    colback=pink!20,
+    colframe=black,
+    arc=0mm
+]
+\small
+\textbf{Recurrence Formula:}
+
+\[
+T(n)=2T\left(\frac{pokemon}{2}\right)+pokemon
+\]
+\end{tcolorbox}
+
+\end{tcolorbox}
+
+
+
+
+
+
+\end{document}
