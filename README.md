@@ -73,7 +73,7 @@ notes_template
 
 ## 📄 License
 
-Licensed under MIT License, the templates and the code are licensed through it but not the pictures. For further imformation, see the [LICENSE](LICENSE) file.
+Licensed under MIT License, the templates and the code are licensed through it but not the pictures. For further imformation, see the [LICENSE](LICENSE.md) file.
 
 ---
 
