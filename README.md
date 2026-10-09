@@ -29,7 +29,6 @@ This repository aims to give the tools and the templates to build better notes f
 
 Just clone the repo so you have directly the latex files or copy the templates manually into your project, your paper latex file. 
 
-All the code, the templates, in the `/src` directory are totally free to use without any restriction. (⌐■_■)
 
 ---
 
