@@ -21,20 +21,20 @@
   </a>
 </p>
 
-This repository aims to give the tools and the templates to build better notes for any topic using latex files so that all your papers will be completly stylized!!! ✪ ω ✪
+This repository aims to give the tools and the templates to build better notes for any topic using LaTeX files so that all your papers will be completely stylized!!! ✪ ω ✪
 
 ---
 
 ## o(*￣▽￣*)o Usage
 
-Just clone the repo so you have directly the latex files or copy the templates manually into your project, your paper latex file. 
+Just clone the repo so you have directly the LaTeX files or copy the templates manually into your project, your paper LaTeX file. 
 
 
 ---
 
 ## 🔄 Customization
 
-Make the templates your own by customizing it with your course, class, paper, research, cheatsheet informations and content.
+Make the templates your own by customizing them with your course, class, paper, research, cheatsheet information and content.
 
 ---
 
@@ -72,7 +72,7 @@ notes_template
 
 ## 📄 License
 
-Licensed under MIT License, the templates and the code are licensed through it but not the pictures. For further imformation, see the [LICENSE](LICENSE.md) file.
+Licensed under MIT License, the templates and the code are licensed through it but not the pictures. For further information, see the [LICENSE](LICENSE.md) file.
 
 ---
 
